@@ -63,4 +63,13 @@ class CompanyController extends Controller
 
         return redirect('company')->with('message','Successfully Edited Company');
     }
+
+     public function destroy($id)
+    {
+        $company = Company::find($id);
+
+        $company->delete();
+
+        return redirect('company')->with('message','Successfully Deleted Company');
+    }
 }

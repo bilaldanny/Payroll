@@ -7,7 +7,7 @@
         <div class="col-sm-12">
             <div class="page-title-box">
 
-                <h4 class="page-title">Manage Company List</h4>
+                <h4 class="page-title">Manage Location List</h4>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                 @endif
 
 
-                <a class="btn btn-primary" href="{{ url('company/create') }}">Create Company</a>
+                <a class="btn btn-primary" href="{{ url('location/create') }}">Create Location</a>
 
                 <hr>
 
@@ -35,9 +35,7 @@
                     <tr>
                         <th width="2%">Sr.No</th>
 
-                        <th>Company name</th>
-                        <th width="40%">Company Location</th>
-                        <th>Created By</th>
+                        <th>location name</th>
 
 
                         <th width="15%">Action</th>
@@ -48,17 +46,14 @@
 
                     <tbody>
                     @php $i=1;@endphp
-                    @foreach($companies as $company)
+                    @foreach($locations as $location)
                         <tr>
                             <td>{{ $i }}</td>
-                            <td>{{ $company->company_name }}</td>
-                            <td>{{ $company->location }}</td>
-                            <td>{{ $company->users->name }}</td>
+                            <td>{{ $location->location_name }}</td>
                             <td>
+                                <a href="{{ url('location/'.$location->id.'/edit') }}" class="btn btn-primary" style="float: left; margin-right: 5%;"><i class="fa fa-pencil"></i></a>
 
-                                <a href="{{ url('company/'.$company->id.'/edit') }}" class="btn btn-primary" style="float: left; margin-right: 5%;"><i class="fa fa-pencil"></i></a>
-
-                                {!! Form::model($company, ['method' => 'delete','url' => ['company', $company->id], 'files'=>true, 'class' => 'delete_form']) !!}
+                                {!! Form::model($location, ['method' => 'delete','url' => ['location', $location->id], 'files'=>true, 'class' => 'delete_form']) !!}
 
                                     <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
 

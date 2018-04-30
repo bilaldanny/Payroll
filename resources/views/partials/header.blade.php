@@ -10,7 +10,7 @@
                 <!--</a>-->
                 <!-- Image Logo -->
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="" height="30">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="" height="30">
                 </a>
 
             </div>
@@ -40,7 +40,7 @@
                             <li>
                                 <a href="#" class="user-list-item">
                                     <div class="avatar">
-                                        <img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="{{ asset('assets/images/users/avatar-2.jpg') }}" alt="">
                                     </div>
                                     <div class="user-desc">
                                         <span class="name">Patricia Beach</span>
@@ -52,7 +52,7 @@
                             <li>
                                 <a href="#" class="user-list-item">
                                     <div class="avatar">
-                                        <img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="{{ asset('assets/images/users/avatar-3.jpg') }}" alt="">
                                     </div>
                                     <div class="user-desc">
                                         <span class="name">Connie Lucas</span>
@@ -64,7 +64,7 @@
                             <li>
                                 <a href="#" class="user-list-item">
                                     <div class="avatar">
-                                        <img src="assets/images/users/avatar-4.jpg" alt="">
+                                        <img src="{{ asset('assets/images/users/avatar-4.jpg') }}" alt="">
                                     </div>
                                     <div class="user-desc">
                                         <span class="name">Margaret Becker</span>
@@ -129,7 +129,7 @@
                     </li>
 
                     <li class="dropdown navbar-c-items">
-                        <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                        <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true"><img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt="user-img" class="img-circle"> </a>
                         <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
                             <li class="text-center">
                                 <h5>Hi, John</h5>
@@ -191,6 +191,39 @@
                                     <li><a href="{{ url('branch') }}">Branch Management</a></li>
                                 </ul>
                             </li>
+
+                            <!-- LOcation -->
+
+                                <li class="has-submenu">
+                                    <a href="#">Location</a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ url('location') }}">Location Management</a></li>
+                                    </ul>
+                                </li>
+
+                            <!-- LOcation -->
+
+                            <!-- Department -->
+
+                                <li class="has-submenu">
+                                    <a href="#">Department</a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ url('department') }}">Department Management</a></li>
+                                    </ul>
+                                </li>
+
+                            <!-- Department -->
+
+                            <!-- Employee -->
+
+                                <li class="has-submenu">
+                                    <a href="#">Employee</a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ url('employee') }}">Employee Management</a></li>
+                                    </ul>
+                                </li>
+
+                            <!-- Employee -->
                         </ul>
 
                     </li>

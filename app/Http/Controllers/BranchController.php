@@ -74,4 +74,13 @@ class BranchController extends Controller
         return redirect('branch')->with('message','Successfully Updated Branch');
     }
 
+    public function destroy($id)
+    {
+        $branch = Branch::find($id);
+
+        $branch->delete();
+
+        return redirect('branch')->with('message','Successfully Deleted Branch');
+    }
+
 }

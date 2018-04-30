@@ -17,5 +17,8 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/', 'HomeController@index')->name('home');
     Route::Resource('company','CompanyController');
     Route::Resource('branch','BranchController');
+    Route::Resource('location','LocationController');
+    Route::Resource('department','DepartmentController');
+    Route::Resource('employee','EmployeeController');
 });
 

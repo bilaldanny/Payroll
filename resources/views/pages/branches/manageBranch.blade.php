@@ -54,7 +54,16 @@
                             <td>{{ $branch->companies->company_name }}</td>
                             <td>{{ $branch->location }}</td>
                             <td>
-                                <a href="{{ url('branch/'.$branch->id.'/edit') }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+
+                                <a href="{{ url('branch/'.$branch->id.'/edit') }}" class="btn btn-primary" style="float: left; margin-right: 5%;"><i class="fa fa-pencil"></i></a>
+
+                                {!! Form::model($branch, ['method' => 'delete','url' => ['branch', $branch->id], 'files'=>true, 'class' => 'delete_form']) !!}
+
+                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+
+                                    {{csrf_field()}}
+                                
+                                </form>
                             </td>
                         </tr>
                         @php $i++;@endphp
@@ -69,6 +78,28 @@
 @endsection
 
 @section('scripts')
+
+    <!-- Script For Alert Msg -->
+
+    <script>
+        $(document).ready(function(){
+
+            $('.delete_form').on('submit', function(){
+
+                if(confirm("Are You Sure You Want To Delete ?"))
+                {
+                  return true;
+                }
+                else
+                {
+                  return false;
+                }
+
+            });
+        });
+    </script>
+
+    <!-- Script For Alert Msg -->
 
     <script src="{{ asset('plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js') }}"></script>
     <script src="{{ asset('plugins/multiselect/js/jquery.multi-select.js') }}"></script>

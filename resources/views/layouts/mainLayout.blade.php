@@ -12,6 +12,12 @@
 
     <title>Zircos - Responsive Admin Dashboard Template</title>
 
+    <!-- Jquery 2.2.4 -->
+
+        <script src=" {{ asset('js/Jquery/jquery-2.2.4.js') }} "></script>
+
+    <!-- Jquery 2.2.4 -->
+
     <!--Morris Chart CSS -->
     <link rel="stylesheet" href="{{ asset('plugins/morris/morris.css') }}">
 
@@ -39,6 +45,18 @@
     <![endif]-->
 
     <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
+
+    <!-- DatePicker CSS -->
+            
+        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datepicker.css')}}">
+
+    <!-- DatePicker CSS -->
+
+    <!-- DatePicker JS -->
+
+        <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+            
+    <!-- DatePicker JS -->
 
 </head>
 
