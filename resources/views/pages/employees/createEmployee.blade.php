@@ -224,9 +224,17 @@
                                 <div class="form-group row">
                                     <label for="status" class="col-sm-2">Status<span class="text-danger">*</span></label>
                                     <div class="col-sm-12">
-                                        <input type="text" name="status" parsley-trigger="change"
-                                               placeholder="Enter Status Here" value="{{ old('status') }}" autocomplete="off" class="form-control"/>
+                                        <div>
+                                            <div class="radio radio-primary radio-inline">
+                                                <input type="radio" id="inlineRadio123" name="status" value="1" checked>
+                                                <label for="inlineRadio123"> Active </label>
+                                            </div>
+                                            <div class="radio radio-danger radio-inline">
+                                                <input type="radio" id="inlineRadio223" name="status" value="0">
+                                                <label for="inlineRadio223"> In Active </label>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
 
