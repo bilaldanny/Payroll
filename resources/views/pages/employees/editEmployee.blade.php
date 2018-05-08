@@ -199,11 +199,32 @@
                             <div class="form-group row">
                                 <label for="status" class="col-sm-2">Status<span class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    {!! Form::text('status' , null ,['class' => 'form-control','parsley-trigger' => 'change','placeholder' => 'Enter Status Here']) !!}
+                                    <div>
+                                        @if($employee->status == 1)
+                                        <p class="btn-switch">                  
+                                            <input type="radio" value="1" id="yes" name="status" checked class="btn-switch__radio btn-switch__radio_yes" />
 
+                                            <input type="radio" value="0" id="no" name="status" class="btn-switch__radio btn-switch__radio_no" />
+
+                                            <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Active</span></label>
+
+                                            <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Not Active</span></label>                            
+                                        </p>
+                                        @else
+                                        <p class="btn-switch">                  
+                                            <input type="radio" value="1" id="yes" name="status"  class="btn-switch__radio btn-switch__radio_yes" />
+
+                                            <input type="radio" value="0" id="no" name="status" class="btn-switch__radio btn-switch__radio_no" checked/>
+
+                                            <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Active</span></label>
+
+                                            <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Not Active</span></label>                            
+                                        </p>
+                                        @endif
+
+                                    </div>
                                 </div>
                             </div>
-
                             <!-- Employee Status -->
 
                             <!-- Created By -->

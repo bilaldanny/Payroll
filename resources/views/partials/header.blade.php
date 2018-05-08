@@ -173,7 +173,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li class="has-submenu">
-                        <a href="#">Dashboard</a>
+                        <a href="{{ url('/') }}">Dashboard</a>
                     </li>
 
                     <li class="has-submenu">
@@ -214,17 +214,17 @@
 
                             <!-- Department -->
 
-                            <!-- Employee -->
-
-                                <li class="has-submenu">
-                                    <a href="#">Employee</a>
-                                    <ul class="submenu">
-                                        <li><a href="{{ url('employee') }}">Employee Management</a></li>
-                                    </ul>
-                                </li>
-
-                            <!-- Employee -->
                         </ul>
+
+                        <li class="has-submenu">
+                        <a href="{{ url('company') }}">Employee</a>
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <a href="#">Employee</a>
+                                <ul class="submenu">
+                                    <li><a href="{{ url('employee') }}">Employee Management</a></li>
+                                </ul>
+                            </li>
 
                     </li>
 

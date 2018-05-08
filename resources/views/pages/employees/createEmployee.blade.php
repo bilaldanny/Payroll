@@ -148,7 +148,7 @@
                                         
                                         <div id="datepicker" class="input-group date" data-date-format="yy-mm-dd">
                                             
-                                                <input class="form-control input" required="" type="text" name="dob">
+                                                <input class="form-control input" required="" type="text" name="dob" placeholder="Enter Date Of Birth">
                                                 <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
 
                                         </div>
@@ -166,7 +166,7 @@
                                         
                                         <div id="hiring_date" class="input-group date" data-date-format="yy-mm-dd">
                                             
-                                                <input class="form-control input" required="" type="text" name="hiring_date">
+                                                <input class="form-control input" required="" type="text" name="hiring_date" placeholder="Enter Hiring Date">
                                                 <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
 
                                         </div>
@@ -175,24 +175,6 @@
                                 </div>
 
                                 <!-- Hiring Date -->
-
-                                <!-- Leaving Date -->
-
-                                <div class="form-group row">
-                                    <label for="leaving_date" class="col-sm-2">Leaving Date<span class="text-danger">*</span></label>
-                                    <div class="col-sm-12">
-                                        
-                                        <div id="leaving_date" class="input-group date" data-date-format="yy-mm-dd">
-                                            
-                                                <input class="form-control input" required="" type="text" name="leaving_date">
-                                                <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- Leaving Date -->
 
                                 <!-- Phone Number -->
 
@@ -224,18 +206,19 @@
                                 <div class="form-group row">
                                     <label for="status" class="col-sm-2">Status<span class="text-danger">*</span></label>
                                     <div class="col-sm-12">
-                                        <div>
-                                            <div class="radio radio-primary radio-inline">
-                                                <input type="radio" id="inlineRadio123" name="status" value="1" checked>
-                                                <label for="inlineRadio123"> Active </label>
-                                            </div>
-                                            <div class="radio radio-danger radio-inline">
-                                                <input type="radio" id="inlineRadio223" name="status" value="0">
-                                                <label for="inlineRadio223"> In Active </label>
-                                            </div>
 
-                                        </div>
+                                        <p class="btn-switch">                  
+                                            <input type="radio" value="1" id="yes" name="status" checked class="btn-switch__radio btn-switch__radio_yes" />
+
+                                            <input type="radio" value="0" id="no" name="status" class="btn-switch__radio btn-switch__radio_no" />
+
+                                            <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Active</span></label>
+
+                                            <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Not Active</span></label>                            
+                                        </p>
+
                                     </div>
+                                        
                                 </div>
 
                                 <!-- Status -->
@@ -309,19 +292,6 @@
 
             $(function(){
                 $("#hiring_date").datepicker({
-                    autoclose: true,
-                    endDate: $yesterday,
-                }).datepicker('update');
-            });
-        </script>
-
-        <script>
-            $today = new Date();
-            $yesterday = new Date($today);
-            $yesterday.setDate($today.getDate() - 1);
-
-            $(function(){
-                $("#leaving_date").datepicker({
                     autoclose: true,
                     endDate: $yesterday,
                 }).datepicker('update');
